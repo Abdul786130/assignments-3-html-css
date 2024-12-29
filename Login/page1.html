@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .back-logo {
+      position: absolute;
+      top: 20px; /* Distance from the top of the page */
+      left: 20px; /* Distance from the left edge */
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Logo Bar */
+    .logo-bar {
+      position: absolute;
+      top: -60px;
+      left: 200px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .logo-bar img {
+      width: 300 px;
+      height:250px;
+      margin-right: 50px;
+    }
+
+    .form-container {
+      background-color: #c5c5c5;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+      box-sizing: border-box;
+    }
+
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #007da3;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .radio-group label {
+      margin-right: 10px;
+    }
+
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .button-group {
+      text-align: center;
+    }
+
+    .button-group button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .button-group button[type="reset"] {
+      background-color: #f44336;
+    }
+
+    .button-group button.back {
+      background-color: #2196F3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 10px;
+        width: 90%;
+      }
+      .button-group button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo Bar -->
+  <div class="back-logo" onclick="window.history.back();">
+    <img src="img2.jpg" alt="Back">
+    
+  </div>
+  <div class="logo-bar">
+    <img src="logo.png" alt="Logo"> <!-- Replace with your logo -->
+    <span>My Website</span>
+  </div>
+
+  <div class="form-container">
+    <h1>Registration Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="first-name">FIRST NAME</label>
+        <input type="text" id="first-name" maxlength="30" placeholder="Enter the First Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">LAST NAME</label>
+        <input type="text" id="last-name" maxlength="30" placeholder="Enter the Last Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">DATE OF BIRTH</label>
+        <input type="date" id="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">EMAIL ID</label>
+        <input type="email" id="email" placeholder="Enter the Email Address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">GENDER</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Adress">ADDRESS</label>
+        <input type="text" id="adress" placeholder="Enter Address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pincode">PIN CODE</label>
+        <input type="text" id="pincode" pattern="[0-9]{6}" placeholder="Enter the Pin Code" required>
+      </div>
+
+      <div class="form-group">
+        <label for="courses">COURSES</label>
+        <select id="courses">
+            <option value="course1">Empty --- </option>
+            <option value="course1">Web development</option>
+            <option value="course2">Graphic Design</option>
+            <option value="course3">Artificial Intelligence</option>
+            <option value="course2">Data Scientist</option>
+            <option value="course3">Web Optimization Specialist</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="upload">APPLIED FOR</label>
+        <input type="file" id="upload" accept=".png, .jpg, .jpeg" required>
+      </div>
+
+      <div class="button-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <!-- Back button -->
+        
+        
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
